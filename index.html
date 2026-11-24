@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Happy 25th Golden Birthday, Deepa ✨🎂</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="prog"></div>
+  <canvas id="fw"></canvas>
+  <canvas id="confetti"></canvas>
+  <button class="theme" id="theme" aria-label="Toggle light or dark theme">🌓</button>
+  <button class="theme" id="snd" aria-label="Mute or unmute sounds" style="right:64px">🔊</button>
+
+  <section id="hero">
+    <div class="golden-badge">✨ 25th Golden Birthday ✨</div>
+    <div class="date">25 · November · Turning 25</div>
+    <h1>Happy 25th Birthday,<br>Deepa!</h1>
+    <p class="sub">25 on the 25th — a once-in-a-lifetime Golden Birthday for the person who makes every day shine brighter. ✨</p>
+    <div class="count" id="count"></div>
+    <button class="btn" id="open">Open your golden surprise 🎁</button>
+  </section>
+
+  <section id="cakeSec" class="hidden">
+    <h2 class="reveal">Make a golden wish, Deepa 🕯️</h2>
+    <p class="hint reveal">Tap the cake to blow out the candles</p>
+    <button class="btn mini reveal" id="song">🎵 Play the birthday song</button>
+    <div class="cake reveal" id="cake" role="button" aria-label="Blow out the candles">
+      <div class="topper-25">25</div>
+      <div class="candles">
+        <div class="candle">
+          <div class="flame"></div>
+        </div>
+        <div class="candle">
+          <div class="flame"></div>
+        </div>
+        <div class="candle">
+          <div class="flame"></div>
+        </div>
+      </div>
+      <div class="layer l3">
+        <div class="drip"></div>
+      </div>
+      <div class="layer l2">
+        <div class="drip"></div>
+      </div>
+      <div class="layer l1">
+        <div class="drip"></div>
+      </div>
+    </div>
+    <div id="wish">May your 25th year be pure gold 💖<small class="keep">scroll down whenever you’re ready ↓</small></div>
+  </section>
+
+  <section id="milestoneSec" class="hidden">
+    <h2 class="reveal">25 Golden Years of You ✨</h2>
+    <p class="hint reveal">25 on the 25th of November — celebrating a quarter-century of magic</p>
+    <div class="stats-grid reveal">
+      <div class="stat-card">
+        <span class="stat-num" data-target="25">0</span>
+        <span class="stat-label">Golden Years</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-num" data-target="300">0</span>
+        <span class="stat-label">Months of Joy</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-num" data-target="9131">0</span>
+        <span class="stat-label">Days Shining</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-num" data-target="100">0</span>
+        <span class="stat-label">% Pure Heart</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="balloonSec" class="hidden">
+    <h2 class="reveal">Pop a golden balloon 🎈</h2>
+    <p class="hint reveal">Each one hides a little message for your 25th</p>
+    <div id="balloons" class="reveal"></div>
+    <div id="pop"></div>
+  </section>
+
+  <section id="reasonSec" class="hidden">
+    <h2 class="reveal">Why you’re so special 💎</h2>
+    <p class="hint reveal">Tap a card to flip it</p>
+    <div class="grid reveal">
+      <div class="flip"><i class="f">💗</i><i class="b">Your heart is the kindest I know.</i></div>
+      <div class="flip"><i class="f">😂</i><i class="b">You make me laugh like nobody else can.</i></div>
+      <div class="flip"><i class="f">🌟</i><i class="b">You light up every room you walk into.</i></div>
+      <div class="flip"><i class="f">🤝</i><i class="b">You’re always there, no matter what.</i></div>
+      <div class="flip"><i class="f">🎀</i><i class="b">You’re beautiful inside and out.</i></div>
+      <div class="flip"><i class="f">👑</i><i class="b">25 looks effortlessly golden on you.</i></div>
+    </div>
+  </section>
+
+ 
+
+  <section id="wheelSec" class="hidden">
+    <h2 class="reveal">Spin the 25th Birthday Wheel 🎡</h2>
+    <p class="hint reveal">Your golden birthday, your rules — spin for a treat!</p>
+    <div class="wheel-wrap reveal">
+      <div class="wheel-pointer">▼</div>
+      <canvas id="wheelCanvas" width="280" height="280"></canvas>
+    </div>
+    <button class="btn mini" id="spinBtn" style="margin-top:18px">Spin the Wheel ✨</button>
+    <div id="wheelResult" class="stat" style="margin-top:14px;font-size:1.15rem"></div>
+  </section>
+
+
+<section id="scratchSec" class="hidden">
+  <h2 class="reveal">One Last Surprise, Bestie! 🎁</h2>
+  <p class="hint reveal">Scratch it and unlock your special bestie reward! 😎</p>
+  <div class="scratch reveal">
+    <div class="prize">
+       Congratulations, Bestie!<br><br>
+      You've officially won a Lifetime Friendship Membership! 🤝<br>
+      Includes unlimited bakwaas, silly jokes, endless roasting,
+      free advice (whether you ask or not 😂), and a friend who's
+      always got your back! ❤️<br><br>
+      <strong>Terms & Conditions: Friendship never expires! ♾️</strong>
+    </div>
+    <canvas id="sc" width="300" height="500"></canvas>
+  </div>
+</section>
+
+  <section id="gameSec" class="hidden">
+    <h2 class="reveal">Catch the golden hearts 💛</h2>
+    <p class="hint reveal">Tap as many as you can in 20 seconds (aim for 25!)</p>
+    <div id="arena" class="reveal"></div>
+    <div class="stat" id="stat">Ready?</div>
+    <button class="btn mini" id="start">Start game</button>
+  </section>
+
+  <section id="memSec" class="hidden">
+    <h2 class="reveal">Match the pairs 🧩</h2>
+    <p class="hint reveal">Flip two cards at a time and find all six pairs</p>
+    <div id="mem" class="reveal"></div>
+    <div class="stat" id="memStat"></div>
+    <button class="btn mini" id="memReset">Shuffle again</button>
+  </section>
+
+  <section id="giftSec" class="hidden">
+    <h2 class="reveal">Pick a golden gift 🎁</h2>
+    <p class="hint reveal">Tap each box to unwrap your surprises</p>
+    <div class="gifts reveal">
+      <button class="gift" aria-label="Gift 1">🎁</button>
+      <button class="gift" aria-label="Gift 2">🎁</button>
+      <button class="gift" aria-label="Gift 3">🎁</button>
+    </div>
+    <div id="giftMsg"></div>
+
+    <h2 class="reveal" style="margin-top:44px">Make your 25th wish ⭐</h2>
+    <p class="hint reveal">Type it and send it to the stars</p>
+    <div class="wishbox reveal">
+      <input id="wishIn" maxlength="60" placeholder="In my 25th year, I wish for…">
+      <button class="btn" id="wishGo">Send ✨</button>
+    </div>
+  </section>
+
+  <section id="fortuneSec" class="hidden">
+    <h2 class="reveal">Your 25th year ahead 🥠</h2>
+    <p class="hint reveal">Crack the golden cookie to read your fortune</p>
+    <button class="cookie reveal" id="fortuneGo" aria-label="Crack the fortune cookie">🥠</button>
+    <div id="fortune"></div>
+  </section>
+
+  <section id="capsuleSec" class="hidden">
+    <h2 class="reveal">25th Birthday Time Capsule 💌</h2>
+    <p class="hint reveal">Write a promise or goal for your 25th year & seal it</p>
+    <div class="card reveal" style="width:100%">
+      <textarea id="capIn" rows="3" maxlength="220" placeholder="Dear 26-year-old Deepa, this year I promise myself…"></textarea>
+      <button class="btn mini" id="capSave" style="margin-top:14px">Seal in Golden Capsule 🔒</button>
+      <div id="capSaved" class="cap-note"></div>
+    </div>
+  </section>
+
+  <section id="letterSec" class="hidden">
+    <div class="card golden-border reveal">
+      <div class="card-tag">25 · 11 · Golden Edition</div>
+      <h2>Dear Deepa,</h2>
+      <p>Happy 25th Golden Birthday to my favourite person! Turning 25 on the 25th happens only once in a lifetime — and nobody deserves a year as radiant and unforgettable as you do.</p>
+      <p>Thank you for the laughter, the late-night talks, and for always being there — no matter what. You make ordinary days feel golden.</p>
+      <p>Here’s to chapter 25 bringing you bold adventures, big dreams come true, and all the love your heart can hold. 🌸✨</p>
+      <div class="sign">Your best friend 💕</div>
+    </div>
+    <h2 class="reveal" style="margin-top:44px">My 25 wishes for you</h2>
+    <div class="chips reveal">
+      <span class="chip">👑 Golden 25th</span>
+      <span class="chip">🌷 Endless smiles</span>
+      <span class="chip">✨ Big dreams</span>
+      <span class="chip">🍰 Lots of cake</span>
+      <span class="chip">💖 Pure love</span>
+      <span class="chip">🌍 Adventures</span>
+      <span class="chip">☀️ Happiness always</span>
+    </div>
+    <button class="btn" id="fwGo" style="margin-top:36px;animation:none">Golden fireworks finale 🎆</button>
+    <button class="btn" id="again" style="margin-top:16px;animation:none">Celebrate again 🎉</button>
+  </section>
+
+  <footer>Made with 💗 & ✨ for Deepa’s 25th Golden Birthday · 25 November</footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

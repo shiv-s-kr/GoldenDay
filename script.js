@@ -386,13 +386,13 @@
   mset(); $('#memReset').addEventListener('click', mset);
 
   // ---- fortune cookie ----
-  var fo = [
-    'Your 25th Golden Year brings an unforgettable adventure ✈️',
-    'At 25, your biggest dream finally says yes 🌠',
-    'Golden luck and endless laughter will follow you everywhere 😂',
-    'A huge milestone win is waiting right around the corner 🏆',
-    'Love, sparkle, and good news arrive together in chapter 25 💌'
-  ];
+var fo = [
+  'Your year will be full of fun, laughter and crazy memories! 🎉',
+  'Good luck, good vibes and lots of happiness are coming your way! 🍀',
+  'Your dreams are getting closer, so keep working hard! 🌟',
+  'More success, more smiles and fewer problems await you! 😂',
+  'A year full of surprises, adventures and unforgettable friendship! 🥳'
+];
   $('#fortuneGo').addEventListener('click', function () {
     var m = $('#fortune'); m.classList.remove('show'); void m.offsetWidth;
     m.textContent = fo[Math.floor(Math.random() * fo.length)]; m.classList.add('show'); burst(50); sfx('wish');
